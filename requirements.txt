@@ -1,0 +1,12 @@
+
+gradio
+langchain
+langchain-community
+faiss-cpu
+groq
+langchain-groq
+python-dotenv
+pypdf
+pytesseract
+pillow
+pandas
