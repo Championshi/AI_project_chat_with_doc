@@ -89,10 +89,11 @@ def ask_question(query):
     return f"💬 **Answer:** {result['result']}"
 
 # Gradio Interface
+# Gradio Interface
 with gr.Blocks() as app:
-    gr.Markdown("<h1 style='text-align: center; color: #4CAF50;'>Chat with Documents AI</h1>")
+    gr.Markdown("<h1 style='text-align: center; color: #4CAF50;'>Chat with Documents using Groq AI</h1>")
     gr.Markdown(
-        "<p style='text-align: center; color: #555;'>Upload a document (PDF, DOCX, TXT, CSV, or Image) and ask questions to interact with its content!</p>"
+        "<p style='text-align: center; color: #fff;'>Upload a document (PDF, DOCX, TXT, CSV, or Image) and ask questions to interact with its content!</p>"
     )
     
     with gr.Row():
@@ -116,6 +117,11 @@ with gr.Blocks() as app:
     # Add some CSS for styling
     gr.HTML(""" 
     <style> 
+        body {
+            background-color: #121212;  /* Dark background */
+            font-family: Arial, sans-serif;
+            color: #fff;  /* White text color for readability */
+        }
         #upload_button { 
             background-color: #4CAF50; 
             color: white; 
@@ -148,14 +154,23 @@ with gr.Blocks() as app:
         #ask_button:hover { 
             background-color: #007bb5; 
         } 
+        .gradio-container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #1c1c1c;  /* Dark container */
+        }
+        .gradio-textbox input {
+            color: #fff;  /* White text for textboxes */
+            background-color: #333;  /* Dark background for textboxes */
+        }
     </style> 
     """)
 
-# Launch the Gradio app
+# Launch the Gradio app with localhost and port
 if __name__ == "__main__":
-    app.launch()
-
-
+    port = 5000  # You can change the port if needed
+    app.launch(server_name="localhost", server_port=port)
 
 # import os
 # import gradio as gr
