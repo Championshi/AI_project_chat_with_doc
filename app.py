@@ -169,8 +169,8 @@ with gr.Blocks() as app:
 
 # Launch the Gradio app with localhost and port
 if __name__ == "__main__":
-    port = 5000  # You can change the port if needed
-    app.launch(server_name="localhost", server_port=port)
+    port = int(os.getenv("PORT", 5000))  # Render uses the PORT environment variable
+    app.launch(server_name="0.0.0.0", server_port=port)
 
 # import os
 # import gradio as gr
