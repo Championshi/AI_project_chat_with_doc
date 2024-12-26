@@ -25,7 +25,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://https:/github.com/Championshi/chat-with-documents.git
+git clone https://https://github.com/Championshi/chat-with-documents.git
 cd chat-with-documents
 Create a virtual environment:
 
